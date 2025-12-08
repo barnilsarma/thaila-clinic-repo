@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Thaila Clinic & Pharmacy - Trusted Care, Close to Home</title>
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome for Professional Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- Lottie Player -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    
+    <script src="doctorRouter.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Animated Background Particles -->
     <div id="particles-container"></div>
-    
+
     <!-- Floating Medical Elements -->
     <div class="floating-elements">
         <div class="float-element" style="top: 10%; left: 5%;">
@@ -41,30 +45,33 @@
     <!-- Premium Header -->
     <header class="header" id="header">
         <div class="header-container">
-            <div class="logo-container">
-                <div class="logo-circle">
-                    <img src="assets/thaila logo.png" alt="Sri Thaila Clinic Logo" width="56">
+            <a href="#home" style="text-decoration: none;">
+                <div class="logo-container">
+                    <div class="logo-circle">
+                        <img src="assets/thaila logo.png" alt="Sri Thaila Clinic Logo" width="56">
+                    </div>
+                    <div class="logo-text">
+                        <h1>SRI THAILA CLINIC</h1>
+                        <p>Trusted Care, Close to Home</p>
+                    </div>
                 </div>
-                <div class="logo-text">
-                    <h1>SRI THAILA CLINIC</h1>
-                    <p>Trusted Care, Close to Home</p>
-                </div>
-            </div>
-            
+            </a>
+
             <nav class="nav" id="nav">
+                <a href="#aboutus" class="nav-link">ABOUT US</a>
                 <a href="#specialities" class="nav-link">SPECIALITIES</a>
                 <a href="#doctors" class="nav-link">DOCTORS</a>
                 <a href="#facilities" class="nav-link">FACILITIES</a>
                 <a href="#contact" class="nav-link">CONTACT</a>
             </nav>
-            
+
             <div class="header-actions">
                 <a href="#appointment" class="btn-primary">
                     <span>BOOK APPOINTMENT</span>
                     <i class="fas fa-calendar-check"></i>
                 </a>
             </div>
-            
+
             <button class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -80,24 +87,26 @@
             <div class="shape shape-2"></div>
             <div class="shape shape-3"></div>
         </div>
-        
+
         <div class="hero-container">
             <div class="hero-content" data-scroll-animation>
                 <div class="badge-24hr">
                     <i class="fas fa-clock"></i>
                     <span>OPEN 24 HOURS</span>
                 </div>
-                
+                <h1 class="hero-main-title">
+                    SRI THAILA CLINIC
+                </h1>
                 <h1 class="hero-title">
                     Your Neighbourhood<br>
                     <span class="gradient-text">Multispeciality Clinic</span>
                 </h1>
-                
+
                 <p class="hero-subtitle">
-                    Expert doctors, exclusive women's health services, 24-hour OPD, pharmacy, 
+                    Expert doctors, exclusive women's health services, 24-hour OPD, pharmacy,
                     lab and scan facilities — all under one roof
                 </p>
-                
+
                 <div class="hero-stats">
                     <div class="stat-item">
                         <h3>15+</h3>
@@ -114,7 +123,7 @@
                         <p>Happy Patients</p>
                     </div>
                 </div>
-                
+
                 <div class="hero-buttons">
                     <a href="#appointment" class="btn-hero-primary">
                         <span>SCHEDULE CONSULTATION</span>
@@ -125,7 +134,7 @@
                         <i class="fas fa-arrow-circle-right"></i>
                     </a>
                 </div>
-                
+
                 <div class="hero-badges">
                     <div class="badge-item">
                         <i class="fas fa-check-circle"></i>
@@ -141,19 +150,14 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="hero-visual" data-scroll-animation>
                 <div class="lottie-container">
-                    <lottie-player 
-                        src="assets/doctors.json"
-                        background="transparent"
-                        speed="1"
-                        style="width: 100%; height: 100%;"
-                        loop
-                        autoplay>
+                    <lottie-player src="assets/doctors.json" background="transparent" speed="1"
+                        style="width: 100%; height: 100%;" loop autoplay>
                     </lottie-player>
                 </div>
-                
+
                 <div class="floating-cards">
                     <div class="info-card card-1">
                         <i class="fas fa-hospital"></i>
@@ -179,33 +183,97 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="scroll-indicator">
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
     <!-- Vision & Mission Section -->
+    <section class="aboutus" id="aboutus" data-scroll-animation>
+        <div class="section-header center">
+            <h1 class="section-title">ABOUT US</h1>
+            <p class="aboutus-para">
+                Our clinic was founded in 2020 by Gynecologist Dr. S. Shwetha with a clear mission—to offer specialised,
+                high-quality healthcare in a setting that is simple, affordable, and patient-friendly.
+            </p>
+            <p class="aboutus-para">
+                We began with our first centre in Nanganallur and have now expanded to our second branch at
+                Hasthinapuram, Chrompet, serving the community with dedication and trust.
+            </p>
+            <p class="aboutus-para">
+                Over the years, the clinic has grown into a multispeciality centre bringing together experienced
+                doctors, advanced diagnostics, and 24/7 clinical support. Guided by a commitment to ethical practice,
+                transparent care, and accessible specialist services, we continue to grow as a trusted healthcare
+                destination for the community.
+            </p>
+            <p class="aboutus-para">
+                We are a multispeciality clinic dedicated to bridging the gap between patients and speciality doctors.
+                With a team of trusted specialists, we make quality healthcare simple, affordable, and easily accessible
+                for every family.
+            </p>
+        </div>
+    </section>
+    <section class="ourservices" id="ourservices" data-scroll-animation>
+        <div class="whychooseuscont">
+            <h1 class="section-header center">
+                Why Choose Us?
+            </h1>
+            <p class="whychooseus-para">
+                Skip the long waits and complexity of large hospital systems—experience fast specialist access, same-day
+                reports, and clear, straightforward care.
+            </p>
+        </div>
+        <div class="rightbox">
+            <div>
+                <h3 class="keyservices-heading">Key Services</h3>
+                <ul class="mission-list" id="key-services-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Your one-stop clinic for expert consultations</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Lab testing, ECG, ultrasound, and round-the-clock OP & IP services</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Convenient, reliable, and accessible</p>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="womencare-heading">Specialised women health care </h3>
+                <p class="womencarepara">
+                    Women’s Health Made Priority — Gynaecologist Dr. Shwetha providing expert, personalised care.
+                </p>
+            </div>
+        </div>
+    </section>
     <section class="vision-mission" data-scroll-animation>
         <div class="container">
             <div class="section-header center">
                 <span class="section-label">OUR COMMITMENT</span>
                 <h2 class="section-title">Guided by Purpose, Driven by Care</h2>
             </div>
-            
+
             <div class="vm-grid">
                 <div class="vm-card vision-card">
                     <div class="vm-icon">
                         <i class="fas fa-eye"></i>
                     </div>
                     <h3>OUR VISION</h3>
-                    <p class="vm-main">To make quality healthcare accessible, affordable, and compassionate — for every person, every family, every single day.</p>
+                    <p class="vm-main">
+                        We envision a world where healthcare is more than just a service — it’s a caring experience.
+                        Accessible, affordable, and delivered with genuine compassion, ensuring every patient, every
+                        family, every day receives the attention and care they truly deserve.
+                    </p>
                     <div class="vm-tagline">
                         <i class="fas fa-star"></i>
                         <p>Accessible. Affordable. Compassionate Care — Every Day.</p>
                     </div>
                 </div>
-                
+
                 <div class="vm-card mission-card">
                     <div class="vm-icon">
                         <i class="fas fa-bullseye"></i>
@@ -244,9 +312,10 @@
             <div class="section-header center">
                 <span class="section-label">COMPREHENSIVE CARE</span>
                 <h2 class="section-title">Our Medical Specialities</h2>
-                <p class="section-description">Expert care across all medical disciplines, delivered with compassion and cutting-edge technology</p>
+                <p class="section-description">Expert care across all medical disciplines, delivered with compassion and
+                    cutting-edge technology</p>
             </div>
-            
+
             <div class="specialities-grid">
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
@@ -256,7 +325,7 @@
                     <p>Complete pregnancy care from conception to postpartum</p>
                     <div class="card-hover-line"></div>
                 </div>
-                
+
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
                         <i class="fas fa-heart"></i>
@@ -265,7 +334,7 @@
                     <p>Advanced fertility treatments and reproductive health services</p>
                     <div class="card-hover-line"></div>
                 </div>
-                
+
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
                         <i class="fas fa-user-nurse"></i>
@@ -274,7 +343,7 @@
                     <p>Comprehensive women's health and wellness services</p>
                     <div class="card-hover-line"></div>
                 </div>
-                
+
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
                         <i class="fas fa-venus"></i>
@@ -283,7 +352,7 @@
                     <p>Advanced aesthetic and reconstructive procedures</p>
                     <div class="card-hover-line"></div>
                 </div>
-                
+
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
                         <i class="fas fa-procedures"></i>
@@ -292,7 +361,7 @@
                     <p>Expert surgical care with minimally invasive techniques</p>
                     <div class="card-hover-line"></div>
                 </div>
-                
+
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
                         <i class="fas fa-stethoscope"></i>
@@ -301,7 +370,7 @@
                     <p>Comprehensive primary and preventive healthcare</p>
                     <div class="card-hover-line"></div>
                 </div>
-                
+
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
                         <i class="fas fa-syringe"></i>
@@ -310,7 +379,7 @@
                     <p>Specialized diabetes management and prevention</p>
                     <div class="card-hover-line"></div>
                 </div>
-                
+
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
                         <i class="fas fa-walking"></i>
@@ -319,17 +388,17 @@
                     <p>Dedicated care for our senior community members</p>
                     <div class="card-hover-line"></div>
                 </div>
-                
+
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
                         <!-- <i class="fas fa-stomach"></i> -->
-                         <i class="fa-solid fa-fire-flame-simple"></i>
+                        <i class="fa-solid fa-fire-flame-simple"></i>
                     </div>
                     <h3>Surgical Gastroenterology</h3>
                     <p>Advanced digestive system surgical care</p>
                     <div class="card-hover-line"></div>
                 </div>
-                
+
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
                         <i class="fas fa-hand-sparkles"></i>
@@ -338,7 +407,7 @@
                     <p>Complete skin, hair, and cosmetic treatments</p>
                     <div class="card-hover-line"></div>
                 </div>
-                
+
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
                         <i class="fas fa-child"></i>
@@ -347,7 +416,7 @@
                     <p>Expert care for infants, children, and adolescents</p>
                     <div class="card-hover-line"></div>
                 </div>
-                
+
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
                         <i class="fas fa-apple-alt"></i>
@@ -356,7 +425,7 @@
                     <p>Personalized nutrition plans and dietary guidance</p>
                     <div class="card-hover-line"></div>
                 </div>
-                
+
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
                         <i class="fas fa-bone"></i>
@@ -365,7 +434,7 @@
                     <p>Comprehensive musculoskeletal care and treatment</p>
                     <div class="card-hover-line"></div>
                 </div>
-                
+
                 <div class="specialty-card" data-scroll-animation>
                     <div class="specialty-icon">
                         <i class="fas fa-x-ray"></i>
@@ -386,11 +455,12 @@
                 <h2 class="section-title">Our Medical Team</h2>
                 <p class="section-description">Experienced specialists dedicated to your health and wellbeing</p>
             </div>
-            
+
             <div class="doctors-grid">
-                <div class="doctor-card" data-scroll-animation>
+                <div class="doctor-card" onclick="doctorCardClick(0)" data-scroll-animation>
                     <div class="doctor-image">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=500&fit=crop" alt="Dr. Priya Sharma">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=500&fit=crop"
+                            alt="Dr. Priya Sharma">
                         <div class="doctor-overlay">
                             <div class="doctor-specialties">
                                 <span>Gynaecology</span>
@@ -414,10 +484,11 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="doctor-card" data-scroll-animation>
+
+                <div class="doctor-card" onclick="doctorCardClick(1)" data-scroll-animation>
                     <div class="doctor-image">
-                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=500&fit=crop" alt="Dr. Rajesh Kumar">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=500&fit=crop"
+                            alt="Dr. Rajesh Kumar">
                         <div class="doctor-overlay">
                             <div class="doctor-specialties">
                                 <span>General Surgery</span>
@@ -441,10 +512,11 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="doctor-card" data-scroll-animation>
+
+                <div class="doctor-card" onclick="doctorCardClick(2)" data-scroll-animation>
                     <div class="doctor-image">
-                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=500&fit=crop" alt="Dr. Meera Reddy">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=500&fit=crop"
+                            alt="Dr. Meera Reddy">
                         <div class="doctor-overlay">
                             <div class="doctor-specialties">
                                 <span>Pediatrics</span>
@@ -468,10 +540,11 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="doctor-card" data-scroll-animation>
+
+                <div class="doctor-card" onclick="doctorCardClick(3)" data-scroll-animation>
                     <div class="doctor-image">
-                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop" alt="Dr. Arun Krishnan">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop"
+                            alt="Dr. Arun Krishnan">
                         <div class="doctor-overlay">
                             <div class="doctor-specialties">
                                 <span>Diabetology</span>
@@ -495,10 +568,11 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="doctor-card" data-scroll-animation>
+
+                <div class="doctor-card" onclick="doctorCardClick(4)" data-scroll-animation>
                     <div class="doctor-image">
-                        <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=400&h=500&fit=crop" alt="Dr. Lakshmi Devi">
+                        <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=400&h=500&fit=crop"
+                            alt="Dr. Lakshmi Devi">
                         <div class="doctor-overlay">
                             <div class="doctor-specialties">
                                 <span>Dermatology</span>
@@ -522,10 +596,11 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="doctor-card" data-scroll-animation>
+
+                <div class="doctor-card" onclick="doctorCardClick(5)" data-scroll-animation>
                     <div class="doctor-image">
-                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=500&fit=crop" alt="Dr. Venkat Ramanan">
+                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=500&fit=crop"
+                            alt="Dr. Venkat Ramanan">
                         <div class="doctor-overlay">
                             <div class="doctor-specialties">
                                 <span>Orthopedics</span>
@@ -552,16 +627,121 @@
             </div>
         </div>
     </section>
+    <!-- About Dr. S. Shwetha-->
+    <section class="sshwetha" id="sshwetha">
+        <div class="section-header center">
+            <h2 class="section-title">ABOUT DR. S. SHWETHA</h2>
+        </div>
+        <div class="content">
+            <div class="left">
+                <div class="card-shwetha">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=500&fit=crop"
+                        alt="Dr. S. Shwetha">
+                    <hr>
+                    <p>
+                        Dr. Shwetha , Director of Sri Thaila clinic , Consultant in Obstetrics and Gynaecology, holding
+                        an MBBS, MD in Obstetrics and Gynaecology, a Diploma in Cosmetic Gynaecology, a Fellowship in
+                        Laparoscopy, and a Fellowship in Reproductive Medicine. She specializes in managing high-risk
+                        pregnancies, performing minimal invasive surgeries and laparoscopies, and providing expert care
+                        in menopause, cancer screening, gynaecologic oncology, and colposcopy. Her training in cosmetic
+                        gynaecology allows her to offer specialized care for women’s intimate health, combining
+                        aesthetics with functionality.
+                        A strong advocate for safe and natural vaginal deliveries, Dr. Shwetha guides mothers with
+                        personalized support throughout pregnancy, including exercise, nutrition, and lifestyle
+                        modifications to ensure a healthy pregnancy and delivery. She is also passionate about
+                        preventive oncology, offering comprehensive cancer screening and education to help women take
+                        proactive steps for their health.
+                        Committed to holistic, patient-centered care, Dr. Shwetha focuses on adolescent health,
+                        nutritional and lifestyle guidance for conditions like PCOD, and empowering women to make
+                        informed health decisions. Her expertise, coupled with a compassionate and approachable
+                        demeanor, makes her a trusted and reliable healthcare provider in Obstetrics and Gynaecology.
 
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    <h3 class="keyservices-heading">Areas of Expertise</h3>
+                    <ul class="mission-list" id="key-services-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>Normal Deliveries</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>Vaginal Birth after C-Section (VBAC)</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>High Risk Pregnancies</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>Gynaecologic Endoscopic Surgery</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>Laparoscopic Myomectomy</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>Total Laparoscopic Hysterectomy</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>Endometriosis-Laparoscopic Surgery</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>LNG–IUS Insertion</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>Gynaecologic Oncology</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>Hysteroscopic Polypectomy</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>Hysteroscopic Septal Resection</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>Hysteroscopic Fibroid Removal</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>Tubal Recanalisation Surgery</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>PCOS Management</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>Fertility Treatment</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <p>Menopause Management</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Facilities Section -->
     <section class="facilities" id="facilities">
         <div class="container">
             <div class="section-header center">
                 <span class="section-label">WORLD-CLASS INFRASTRUCTURE</span>
                 <h2 class="section-title">Our Facilities</h2>
-                <p class="section-description">State-of-the-art medical infrastructure designed for your comfort and care</p>
+                <p class="section-description">State-of-the-art medical infrastructure designed for your comfort and
+                    care</p>
             </div>
-            
+
             <div class="facilities-grid">
                 <div class="facility-card" data-scroll-animation>
                     <div class="facility-icon">
@@ -570,7 +750,7 @@
                     <h3>24-Hour OPD</h3>
                     <p>Round-the-clock outpatient services for all your medical needs</p>
                 </div>
-                
+
                 <div class="facility-card" data-scroll-animation>
                     <div class="facility-icon">
                         <i class="fas fa-pills"></i>
@@ -578,7 +758,7 @@
                     <h3>In-House Pharmacy</h3>
                     <p>Complete pharmacy with all medicines available 24/7</p>
                 </div>
-                
+
                 <div class="facility-card" data-scroll-animation>
                     <div class="facility-icon">
                         <i class="fas fa-vials"></i>
@@ -586,7 +766,7 @@
                     <h3>Diagnostic Lab</h3>
                     <p>Advanced laboratory with rapid and accurate test results</p>
                 </div>
-                
+
                 <div class="facility-card" data-scroll-animation>
                     <div class="facility-icon">
                         <i class="fas fa-x-ray"></i>
@@ -594,7 +774,7 @@
                     <h3>Imaging & Scan</h3>
                     <p>Latest scanning technology including ultrasound and X-ray</p>
                 </div>
-                
+
                 <div class="facility-card" data-scroll-animation>
                     <div class="facility-icon">
                         <i class="fas fa-hospital"></i>
@@ -602,7 +782,7 @@
                     <h3>Operation Theater</h3>
                     <p>Fully equipped OT with modern surgical instruments</p>
                 </div>
-                
+
                 <div class="facility-card" data-scroll-animation>
                     <div class="facility-icon">
                         <i class="fas fa-notes-medical"></i>
@@ -614,6 +794,34 @@
         </div>
     </section>
 
+    <!-- Testimonials Section with Slider -->
+    <section class="testimonials" id="testimonials" data-scroll-animation>
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label">PATIENT REVIEWS</span>
+                <h2 class="section-title">What Our Patients Say</h2>
+                <p class="section-description">Real feedback from satisfied patients who trust us with their health</p>
+            </div>
+
+            <div class="testimonial-slider-container">
+                <div class="testimonial-wrapper">
+                    <!-- Slides will be inserted by testimonialSlider.js -->
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="testimonial-nav testimonial-prev" aria-label="Previous testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="testimonial-nav testimonial-next" aria-label="Next testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Dots/Pagination -->
+                <div class="testimonial-dots"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Consultation Hours -->
     <section class="consultation-hours" data-scroll-animation>
         <div class="container">
@@ -621,7 +829,7 @@
                 <span class="section-label">DOCTOR AVAILABILITY</span>
                 <h2 class="section-title">Consultation Hours</h2>
             </div>
-            
+
             <div class="hours-grid">
                 <div class="hour-card">
                     <div class="hour-icon">
@@ -631,7 +839,7 @@
                     <p class="time">9:00 AM – 5:00 PM</p>
                     <p class="days">Monday to Saturday</p>
                 </div>
-                
+
                 <div class="hour-card">
                     <div class="hour-icon">
                         <i class="fas fa-hand-sparkles"></i>
@@ -640,7 +848,7 @@
                     <p class="time">9:00 AM – 11:00 AM</p>
                     <p class="days">Sunday</p>
                 </div>
-                
+
                 <div class="hour-card">
                     <div class="hour-icon">
                         <i class="fas fa-stethoscope"></i>
@@ -649,7 +857,7 @@
                     <p class="time">4:00 PM – 8:00 PM</p>
                     <p class="days">Thursday</p>
                 </div>
-                
+
                 <div class="hour-card">
                     <div class="hour-icon">
                         <i class="fas fa-procedures"></i>
@@ -658,7 +866,7 @@
                     <p class="time">4:00 PM – 6:00 PM</p>
                     <p class="days">Monday, Wednesday, Friday</p>
                 </div>
-                
+
                 <div class="hour-card">
                     <div class="hour-icon">
                         <i class="fa-solid fa-house-medical"></i>
@@ -667,7 +875,7 @@
                     <p class="time">4:00 PM – 6:00 PM</p>
                     <p class="days">Tuesday, Thursday, Saturday</p>
                 </div>
-                
+
                 <div class="hour-card">
                     <div class="hour-icon">
                         <i class="fas fa-bone"></i>
@@ -676,7 +884,7 @@
                     <p class="time">6:00 PM – 7:00 PM</p>
                     <p class="days">Tuesday, Saturday</p>
                 </div>
-                
+
                 <div class="hour-card">
                     <div class="hour-icon">
                         <i class="fas fa-child"></i>
@@ -697,7 +905,7 @@
                     <span class="section-label">BOOK YOUR VISIT</span>
                     <h2 class="section-title">Schedule an Appointment</h2>
                     <p>Take the first step towards better health. Our team is ready to provide you with expert care.</p>
-                    
+
                     <div class="appointment-features">
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
@@ -712,7 +920,7 @@
                             <span>Confirmation via SMS & WhatsApp</span>
                         </div>
                     </div>
-                    
+
                     <div class="contact-methods">
                         <a href="tel:9894060645" class="contact-method">
                             <i class="fas fa-phone-alt"></i>
@@ -730,7 +938,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="appointment-form-container" data-scroll-animation>
                     <form class="appointment-form" id="appointmentForm">
                         <div class="form-group">
@@ -740,16 +948,17 @@
                                 <input type="text" name="name" placeholder="Enter your full name" required>
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Phone Number *</label>
                                 <div class="input-wrapper">
                                     <i class="fas fa-phone"></i>
-                                    <input type="tel" name="phone" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
+                                    <input type="tel" name="phone" placeholder="10-digit mobile number" required
+                                        pattern="[0-9]{10}">
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label>Email</label>
                                 <div class="input-wrapper">
@@ -758,7 +967,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Preferred Date *</label>
@@ -767,7 +976,7 @@
                                     <input type="date" name="date" required>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label>Preferred Time *</label>
                                 <div class="input-wrapper">
@@ -781,7 +990,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label>Department *</label>
                             <div class="input-wrapper">
@@ -803,20 +1012,21 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label>Additional Notes</label>
                             <div class="input-wrapper">
                                 <i class="fas fa-comment-medical"></i>
-                                <textarea name="message" rows="3" placeholder="Tell us about your health concern or any specific requirements"></textarea>
+                                <textarea name="message" rows="3"
+                                    placeholder="Tell us about your health concern or any specific requirements"></textarea>
                             </div>
                         </div>
-                        
+
                         <button type="submit" class="btn-submit">
                             <span>CONFIRM APPOINTMENT</span>
                             <i class="fas fa-arrow-right"></i>
                         </button>
-                        
+
                         <p class="form-note">
                             <i class="fas fa-shield-alt"></i>
                             Your information is secure and confidential
@@ -834,7 +1044,7 @@
                 <span class="section-label">GET IN TOUCH</span>
                 <h2 class="section-title">Visit Us Today</h2>
             </div>
-            
+
             <div class="contact-grid">
                 <div class="contact-info" data-scroll-animation>
                     <div class="info-card">
@@ -844,15 +1054,15 @@
                         <div class="info-content">
                             <h3>OUR LOCATION</h3>
                             <p>Plot No. 1-A1, Dr. Rajendra Prasad Road,<br>
-                            Gayathri Nagar, Hasthinapuram,<br>
-                            Chrompet – 600044, Chennai</p>
+                                Gayathri Nagar, Hasthinapuram,<br>
+                                Chrompet – 600044, Chennai</p>
                             <a href="https://maps.app.goo.gl/yctj22a67qqpYWMU7" target="_blank" class="link-button">
                                 <span>Get Directions</span>
                                 <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="info-card">
                         <div class="info-icon">
                             <i class="fas fa-phone-alt"></i>
@@ -864,7 +1074,7 @@
                             <p><strong>WhatsApp:</strong> <a href="https://wa.me/917176660645">91766 60645</a></p>
                         </div>
                     </div>
-                    
+
                     <div class="info-card">
                         <div class="info-icon">
                             <i class="fas fa-envelope"></i>
@@ -874,7 +1084,7 @@
                             <p><a href="mailto:srithalahealthcare@gmail.com">srithalahealthcare@gmail.com</a></p>
                         </div>
                     </div>
-                    
+
                     <div class="info-card">
                         <div class="info-icon">
                             <i class="fas fa-clock"></i>
@@ -886,16 +1096,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="map-container" data-scroll-animation>
-                    <iframe 
+                    <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1234567890123!2d80.1234567890123!3d12.9876543210987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU5JzE1LjYiTiA4MMKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-                        width="100%" 
-                        height="100%" 
-                        style="border:0; border-radius: 20px;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
+                        width="100%" height="100%" style="border:0; border-radius: 20px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                     <a href="https://maps.app.goo.gl/yctj22a67qqpYWMU7" target="_blank" class="map-overlay">
                         <i class="fas fa-map-marked-alt"></i>
@@ -921,7 +1127,8 @@
                                 <p>Trusted Care, Close to Home</p>
                             </div>
                         </div>
-                        <p class="footer-text">Your neighbourhood multispeciality clinic providing comprehensive healthcare services with compassion and expertise.</p>
+                        <p class="footer-text">Your neighbourhood multispeciality clinic providing comprehensive
+                            healthcare services with compassion and expertise.</p>
                         <div class="social-links">
                             <a href="#" aria-label="Facebook">
                                 <i class="fab fa-facebook-f"></i>
@@ -937,7 +1144,7 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="footer-col">
                         <h4>QUICK LINKS</h4>
                         <ul>
@@ -949,7 +1156,7 @@
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
-                    
+
                     <div class="footer-col">
                         <h4>SPECIALITIES</h4>
                         <ul>
@@ -961,13 +1168,14 @@
                             <li><a href="#specialities">Dermatology</a></li>
                         </ul>
                     </div>
-                    
+
                     <div class="footer-col">
                         <h4>CONTACT INFO</h4>
                         <ul class="contact-list">
                             <li>
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>Plot No. 1-A1, Dr. Rajendra Prasad Road, Gayathri Nagar, Hasthinapuram, Chrompet – 600044</span>
+                                <span>Plot No. 1-A1, Dr. Rajendra Prasad Road, Gayathri Nagar, Hasthinapuram, Chrompet –
+                                    600044</span>
                             </li>
                             <li>
                                 <i class="fas fa-phone-alt"></i>
@@ -975,7 +1183,8 @@
                             </li>
                             <li>
                                 <i class="fas fa-envelope"></i>
-                                <span><a href="mailto:srithalahealthcare@gmail.com">srithalahealthcare@gmail.com</a></span>
+                                <span><a
+                                        href="mailto:srithalahealthcare@gmail.com">srithalahealthcare@gmail.com</a></span>
                             </li>
                             <li>
                                 <i class="fas fa-clock"></i>
@@ -986,7 +1195,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <div class="container">
                 <p>&copy; 2024 Sri Thaila Clinic & Pharmacy. All rights reserved.</p>
@@ -1013,6 +1222,10 @@
         <span class="pulse-ring"></span>
     </a>
 
+    <script src="testimonialDb.js"></script>
+    <script src="testimonialSlider.js"></script>
+    <script src="doctorRouter.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
