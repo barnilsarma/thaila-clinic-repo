@@ -1036,7 +1036,44 @@ section {
     color: var(--accent);
     font-size: 18px;
 }
-
+/* ==================== ABOUT DR. S. SHWETHA ========== */
+.sshwetha{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.sshwetha .content{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: row;
+    width:100%;
+    gap: 10rem;
+}
+.sshwetha .content .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:40%;
+}
+.sshwetha .content .left .card-shwetha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap:3rem;
+}
+.sshwetha .content .left .card-shwetha p{
+    text-align: justify;
+}
+.sshwetha .content .left .card-shwetha img{
+    width:80%;
+    border:0 solid transparent;
+    border-radius: 1rem;
+}
 /* ==================== FACILITIES ==================== */
 .facilities {
     background: var(--bg-gradient);
@@ -1929,7 +1966,12 @@ section {
     .doctors-grid {
         grid-template-columns: 1fr;
     }
-    
+    .sshwetha .content{
+        flex-direction: column;
+    }
+    .sshwetha .content .left{
+        width: 100%;
+    }
     .form-row {
         grid-template-columns: 1fr;
     }
