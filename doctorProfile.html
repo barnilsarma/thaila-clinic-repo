@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Doctor Profile — Sri Thaila Clinic</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container profile-container" id="profile-root">
+    <div class="section-header center">
+      <span class="section-label">DOCTOR PROFILE</span>
+    </div>
+    <div id="profile-content">
+      <!-- Rendered by JS -->
+      <p class="muted">Loading doctor information…</p>
+    </div>
+  </div>
+
+  <script src="doctorDb.js"></script>
+  <script>
+    // Parse id from query param
+    function qs(key){
+      const params = new URLSearchParams(location.search);
+      return params.get(key);
+    }
+
+    function escapeHtml(s){
+      if(!s && s !== 0) return '';
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+    }
+
+    function renderDoctor(doc){
+      if(!doc) return document.getElementById('profile-content').innerHTML = '<p class="muted">Doctor not found.</p>';
+      const areas = (doc.area || []).map(a=>`<li>${escapeHtml(a)}</li>`).join('');
+      const about = doc.about || '';
+      document.getElementById('profile-content').innerHTML = `
+        <div class="profile-grid">
+          <div class="profile-photo"><img src="${escapeHtml(doc.photo)}" alt="${escapeHtml(doc.name)}"></div>
+          <div class="profile-main">
+            <h1>${escapeHtml(doc.name)}</h1>
+            <div class="meta">${escapeHtml(doc.designation || doc.position || '')}</div>
+            <div class="academics">${escapeHtml(doc.academics || doc.qualifications || '')}</div>
+            <div class="profile-stats">
+              <div><strong>${escapeHtml(doc.yoe||'')}</strong></div>
+              <div class="muted">${escapeHtml(doc.patients||'')}</div>
+            </div>
+            <div class="profile-about">${about}</div>
+            <div>
+              <strong>Specialties</strong>
+              <ul class="profile-areas">${areas}</ul>
+            </div>
+            <div class="actions">
+              <a class="btn" href="index.html">Back to Doctors</a>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // update URL to /doctor/:id to match requested route without reloading (replaceState)
+      try{
+        const newPath = `/doctor/${encodeURIComponent(doc.id)}`;
+        history.replaceState({ doctorId: doc.id }, '', newPath);
+      }catch(e){/* ignore */}
+
+      // book button can link to appointment section with doctor param
+      const book = document.getElementById('book-btn');
+      if(book){
+        book.addEventListener('click', function(e){
+          e.preventDefault();
+          // navigate to appointment section on index, include doctor id
+          location.href = `index.html#appointment?doctor=${encodeURIComponent(doc.id)}`;
+        });
+      }
+    }
+
+    (function(){
+      const id = qs('id');
+      // try also to extract from pathname if present (/doctor/:id)
+      let docId = id;
+      if(!docId){
+        const m = location.pathname.match(/\/doctor\/(\d+)/);
+        if(m) docId = m[1];
+      }
+
+      const dbRef = window.db || (typeof module !== 'undefined' ? (typeof require === 'function' ? require('./doctorDb') : null) : null) || [];
+      const doc = dbRef.find(d=>String(d.id) === String(docId));
+      renderDoctor(doc);
+    })();
+  </script>
+</body>
+</html>
