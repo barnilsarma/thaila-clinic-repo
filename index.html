@@ -794,6 +794,34 @@
         </div>
     </section>
 
+    <!-- Testimonials Section with Slider -->
+    <section class="testimonials" id="testimonials" data-scroll-animation>
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label">PATIENT REVIEWS</span>
+                <h2 class="section-title">What Our Patients Say</h2>
+                <p class="section-description">Real feedback from satisfied patients who trust us with their health</p>
+            </div>
+
+            <div class="testimonial-slider-container">
+                <div class="testimonial-wrapper">
+                    <!-- Slides will be inserted by testimonialSlider.js -->
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="testimonial-nav testimonial-prev" aria-label="Previous testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="testimonial-nav testimonial-next" aria-label="Next testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Dots/Pagination -->
+                <div class="testimonial-dots"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Consultation Hours -->
     <section class="consultation-hours" data-scroll-animation>
         <div class="container">
@@ -1194,6 +1222,8 @@
         <span class="pulse-ring"></span>
     </a>
 
+    <script src="testimonialDb.js"></script>
+    <script src="testimonialSlider.js"></script>
     <script src="doctorRouter.js"></script>
     <script src="script.js"></script>
 </body>
