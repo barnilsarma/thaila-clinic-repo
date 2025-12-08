@@ -779,7 +779,13 @@ section {
     line-height: 1.6;
     color: var(--text-secondary);
 }
-
+/* ==================== ABOUT US ======================== */
+.aboutus-para{
+    font-size:1.2rem;
+    text-align: justify;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
 /* ==================== SPECIALITIES ==================== */
 .specialities {
     background: var(--bg-gradient);
@@ -1681,6 +1687,11 @@ section {
     .hero-title {
         font-size: 48px;
     }
+    .aboutus-para{
+        font-size: 1.2rem;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
     
     .section-title {
         font-size: 42px;
@@ -1787,6 +1798,11 @@ section {
         flex-direction: column;
         gap: 24px;
         padding: 24px;
+    }
+    .aboutus-para{
+        font-size: 1rem;
+        padding-left: 0vw;
+        padding-right: 0vw;
     }
     
     .stat-divider {
