@@ -375,10 +375,12 @@ body {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.05); }
 }
-
+.hero-main-title{
+    font-size: 68px;
+}
 .hero-title {
     font-family: var(--font-accent);
-    font-size: 68px;
+    font-size: 62px;
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 24px;
@@ -1683,9 +1685,11 @@ section {
         grid-template-columns: 1fr;
         gap: 60px;
     }
-    
-    .hero-title {
+    .hero-main-title{
         font-size: 48px;
+    }
+    .hero-title {
+        font-size: 42px;
     }
     .aboutus-para{
         font-size: 1.2rem;
@@ -1785,9 +1789,11 @@ section {
         padding: 100px 24px 40px;
         min-height: auto;
     }
-    
-    .hero-title {
+    .hero-main-title{
         font-size: 36px;
+    }
+    .hero-title {
+        font-size: 30px;
     }
     
     .hero-subtitle {
