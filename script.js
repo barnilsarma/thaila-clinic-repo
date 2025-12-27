@@ -609,4 +609,28 @@ document.head.appendChild(rippleStyle);
 // ==================== INITIALIZE ALL FEATURES ====================
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Sri Thaila Clinic website loaded successfully! ✨');
+    
+    // ==================== GALLERY RENDERING ====================
+    // Render gallery items using map function
+    const galleryContainer = document.getElementById('galleryContainer');
+    
+    if (galleryContainer && typeof galleryPhotos !== 'undefined') {
+        const galleryHTML = galleryPhotos.map(photo => `
+            <div class="gallery-item" data-id="${photo.id}">
+                <img src="${photo.url}" alt="${photo.title}" loading="lazy">
+            </div>
+        `).join('');
+        
+        galleryContainer.innerHTML = galleryHTML;
+        
+        // Add click event listeners to gallery items
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const photoUrl = this.querySelector('img').src;
+                const photoTitle = this.querySelector('.gallery-item-title').textContent;
+                console.log(`Viewing: ${photoTitle} - ${photoUrl}`);
+                // You can add lightbox or modal functionality here if needed
+            });
+        });
+    }
 });
